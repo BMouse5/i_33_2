@@ -87,49 +87,78 @@
         </div>
     </div>
     </div>
+    <div class="publish_container">
+    <div class="publish-wrapp">
     <div id="page-controls">
         <button onclick="addPage()">Добавить страницу</button>
         <select id="page-selector" onchange="switchPage()">
-            <option value="page-1">Страница 1</option>
+            <option  id="option" value="page-1">Страница 1</option>
         </select>
+        <button id="download-images">Скачать Изображения</button>
     </div>
-    <button id="download-images">Скачать Изображения</button>
+    
 @auth
+    <div class="publish">
     <h3>Публикация отчета</h3>
 <form action="{{ route('report.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div>
-        <label for="project_name">Название проекта:</label>
-        <input type="text" id="project_name" name="project_name" required>
+        <div class="label-wrapp">
+            <label for="project_name">Название проекта:</label>
+        </div>
+        <div class="input-wrapp">
+            <input type="text" id="project_name" name="project_name" required>
+        </div>
     </div>
 
     <div>
-        <label for="description">Описание:</label>
-        <textarea id="description" name="description" required></textarea>
+        <div class="label-wrapp">
+            <label for="description">Описание:</label>
+        </div>
+        <div class="input-wrapp">
+            <textarea id="description" name="description" required></textarea>
+        </div>
     </div>
 
     <div>
-        <label>Тип отчета:</label>
-        <input type="radio" id="public" name="report_type" value="public" required>
-        <label for="public">Публичный</label>
-        <input type="radio" id="private" name="report_type" value="private" required>
-        <label for="private">Частный</label>
+        <div class="label-wrapp">
+            <label>Тип отчета:</label>
+        </div>
+        <div class="input-wrapp">
+            <input type="radio" id="public" name="report_type" value="public" required>
+            <label for="public">Публичный</label>
+            <input type="radio" id="private" name="report_type" value="private" required>
+            <label for="private">Частный</label>
+        </div>
     </div>
 
     <div>
-        <label for="first_page_image">Первая страница (изображение):</label>
-        <input type="file" id="first_page_image" name="first_page_image" accept="image/*" required>
+        <div class="label-wrapp">
+            <label for="first_page_image">Первая страница (изображение):</label>
+        </div>
+        <div class="input-wrapp">
+            <label for="first_page_image" class="custom-file-upload">Загрузить файл</label>
+            <input type="file" id="first_page_image" name="first_page_image" accept="image/*" required>
+        </div>
     </div>
 
     <div>
-        <label for="images">Остальные страницы (изображения):</label>
-        <input type="file" id="images" name="images[]" accept="image/*" multiple>
+        <div class="label-wrapp">
+            <label for="images">Остальные страницы (изображения):</label>
+        </div>
+        <div class="input-wrapp">
+            <label for="images" class="custom-file-upload">Загрузить файл</label>
+            <input type="file" id="images" name="images[]" accept="image/*" multiple>
+        </div>
     </div>
 
     <div>
         <button type="submit">Опубликовать отчет</button>
     </div>
 </form>
+</div>
+</div>
+</div>
 @endauth
 
     <script>
