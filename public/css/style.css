@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.canvas-wrapp {
+    display: flex;
+    max-width: 1920px;
+    width: 100%;
+    position: relative;
+}
+
+#sidebar {
+    width: 13vw; /* Изменено на vw для адаптивности */
+    margin-right: 20px;
+    overflow: hidden; /* Чтобы скрыть переполнение */
+    display: grid;
+    row-gap: 2vw;
+}
+
+#report-area {
+    border: 1px solid #ccc;
+    height: auto;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.block {
+    width: 200px; /* Делает блоки адаптивными */
+    height: auto; /* Установите желаемую высоту */
+    border: 1px solid #000;
+    position: absolute; /* Меняем на relative */
+    resize: both;
+    overflow: hidden; /* Скрывает переполнение */
+    background: white;
+    box-sizing: border-box; /* Учитывает рамку в размер */
+    display: flex; /* Используем flex для центрирования */
+    align-items: center; /* Вертикальное центрирование */
+    justify-content: center; /* Горизонтальное центрирование */
+}
+
+.diagramms {
+    resize:none;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+#sidebar .block {
+    cursor: grab;
+    text-align: center;
+}
+
+.drag-handle {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    cursor: move;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 20px;
+}
+
+#controls {
+    display: none;
+    margin-bottom: 10px;
+}
+
+
+#controls {
+    position: absolute;
+    right: 0;
+
+    width: 43vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #808080b0;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#chart-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+#chart-values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 14px;
+}
+
+#chart-values input{
+    border: none;
+    outline: none;
+    /* font-size: 15px; */
+    background: transparent;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+#chart-values input::placeholder {
+    color: black; /* цвет плейсхолдера */
+}
+
+.chart-buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    column-gap: 20px;
+}
+
+.chart-buttons button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.diagramms span {
+    font-size: 1.5vw;
+    width: 80%;
+}
+
+.diagramm-ico {
+    max-width: 3vw;
+    height: 80px;
+    /* display: flex; */
+    align-items: center;
+    display: flex;
+    padding-left: 3px;
+}
+
+.diagramm-ico img {
+    height: auto;
+    width: 3vw;
+}
