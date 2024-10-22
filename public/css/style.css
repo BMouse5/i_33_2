@@ -5,7 +5,7 @@ body {
 
 .canvas-wrapp {
     display: flex;
-    max-width: 1920px;
+    max-width: 100vw;
     width: 100%;
     position: relative;
 }
@@ -44,7 +44,7 @@ body {
 .diagramms {
     resize:none;
     width: 100%;
-    height: 80px;
+    height: auto;
     display: flex;
     align-items:center;
     justify-content: center;
@@ -289,6 +289,10 @@ body {
     display: none;
 }
 
+.publish form input[type="text"] {
+    max-width: 16vw;
+}
+
 .custom-file-upload {
     display: inline-block;
     padding: 6px 12px;
@@ -302,4 +306,84 @@ body {
 
 .custom-file-upload:hover{
     background:#0945a0;
+}
+
+.img-fluid {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.login {
+    max-width: 100%;
+    width: 100%;
+    border: none !important;
+    border-radius: 18px;
+    box-shadow: 0rem 0rem 1.25rem 0.25rem rgba(var(--bs-body-color-rgb),.075)!important;
+    height: auto;
+    padding: 15px !important;
+}
+
+.password {
+    max-width: 100%;
+    width: 100%;
+    border: none !important;
+    border-radius: 18px;
+    box-shadow: 0rem 0rem 1.25rem 0.25rem rgba(var(--bs-body-color-rgb),.075)!important;
+    height: auto;
+    padding: 15px !important;
+}
+
+.login::placeholder {
+    font-weight: 700 !important;
+    color: black !important;
+}
+
+.password::placeholder {
+    font-weight: 700 !important;
+    color: black !important;
+}
+
+.remember {
+    border: none;
+    resize: none;
+    max-width: 20vw;
+    width: 100%;
+    background: transparent !important;
+}
+
+.login-btn-wrapp {
+    justify-content: center;
+    display: flex;
+    text-align: center !important;
+    margin-top: 7vw !important;
+}
+
+.login-btn {
+    max-width: 70%;
+    width: 100%;
+    /* text-align: center !important; */
+    display: flex;
+    justify-content: center;
+    background-color: #0d6efd !important;
+    transition: background-color ease-in-out 0.5s !important;
+    padding: 15px !important;
+}
+
+.login-btn:hover {
+    background-color:#0945a0 !important;
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 3vw;
+    font-size: 4.0vw;
+    /* font-family: inherit; */
+    font-weight: 400;
+    background: transparent !important;
+}
+
+.login-form-wrapp {
+    background: transparent !important;
+    box-sizing: none;
 }
